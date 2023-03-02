@@ -27,22 +27,6 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $.ajax({ 
-    url: "https://meowfacts.herokuapp.com/", // API endpoint
-    data: {},      // Any data to send
-    type: "GET",           // POST or GET request
-    dataType : "json", // expected data type
-    success: function(result){
-        // $("body").append("<t>"+"<img src="+result.file+">");
-        $("body").append("<h4>"+result.data);
-    },
-    error: function(xhr,status,error) {
-        console.log("Error:",xhr,status,error); }
-});
-  });
-});
-$(document).ready(function(){
-  $("button").click(function(){
     src="main.js";
     $.ajax({ 
     url: "https://aws.random.cat/meow?ref=apilist.fun", // API endpoint
@@ -51,6 +35,22 @@ $(document).ready(function(){
     dataType : "json", // expected data type
     success: function(result){
         $("body").append("<t>"+"<img src="+result.file+">");
+    },
+    error: function(xhr,status,error) {
+        console.log("Error:",xhr,status,error); }
+});
+  });
+});
+$(document).ready(function(){
+  $("button").click(function(){
+    $.ajax({ 
+    url: "https://meowfacts.herokuapp.com/", // API endpoint
+    data: {},      // Any data to send
+    type: "GET",           // POST or GET request
+    dataType : "json", // expected data type
+    success: function(result){
+        // $("body").append("<t>"+"<img src="+result.file+">");
+        $("body").append("<h4>"+result.data);
     },
     error: function(xhr,status,error) {
         console.log("Error:",xhr,status,error); }
